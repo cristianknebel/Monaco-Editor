@@ -14,7 +14,7 @@
   />
 </template>
 
-<script>
+<script lang="ts">
 import { Codemirror } from "vue-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 import { oneDark } from "@codemirror/theme-one-dark";
@@ -25,7 +25,7 @@ export default {
   },
   setup() {
     // eslint-disable-next-line no-undef
-    const code = ref(`console.log('Hello, world!')`);
+    const code = `console.log('Hello, world!')`;
     const extensions = [javascript(), oneDark];
 
     return {
@@ -35,21 +35,4 @@ export default {
     };
   },
 };
-import { EditorState } from "@codemirror/state";
-import { createApp } from "vue";
-import { basicSetup } from "codemirror";
-import VueCodemirror from "vue-codemirror";
-
-const app = createApp();
-
-app.use(VueCodemirror, {
-  // optional default global options
-  autofocus: true,
-  disabled: false,
-  indentWithTab: true,
-  tabSize: 2,
-  placeholder: "Code goes here...",
-  extensions: [basicSetup],
-  // ...
-});
 </script>
