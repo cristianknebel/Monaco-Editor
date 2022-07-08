@@ -15,30 +15,37 @@
   <div id="nav">
     <div id="nav-left">
       <ul>
-        <router-link to="/save"><li>Save</li></router-link>
-        <router-link to="/copy"><li>Copy</li></router-link>
+        <li @click="save">Save</li>
+        <li @click="copy">Copy</li>
       </ul>
     </div>
   </div>
 </template>
 <script lang="ts">
+function save() {
+  console.log("Text saved.");
+}
+function copy() {
+  console.log("Coppied.");
+}
 import { Codemirror } from "vue-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
 import { oneDark } from "@codemirror/theme-one-dark";
+import { EditorSelection } from "@codemirror/state";
 
 export default {
   components: {
     Codemirror,
   },
   setup() {
-    // eslint-disable-next-line no-undef
     const code = `console.log('Hello, world!')`;
     const extensions = [javascript(), oneDark];
-
     return {
       code,
       extensions,
       log: console.log,
+      save,
+      copy,
     };
   },
 };

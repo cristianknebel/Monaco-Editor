@@ -2,14 +2,9 @@ import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 
 const routes = [
   {
-    path: "/copy",
-    name: "Copy",
-    component: () => import("../views/CopyView.vue"),
-  },
-  {
-    path: "/save",
-    name: "Save",
-    component: () => import("../views/SaveView.vue"),
+    path: "/",
+    name: "Home",
+    component: () => import("../views/HomeView.vue"),
   },
 ];
 
