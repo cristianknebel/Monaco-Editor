@@ -12,8 +12,15 @@
     @focus="log('focus', $event)"
     @blur="log('blur', $event)"
   />
+  <div id="nav">
+    <div id="nav-left">
+      <ul>
+        <router-link to="/save"><li>Save</li></router-link>
+        <router-link to="/copy"><li>Copy</li></router-link>
+      </ul>
+    </div>
+  </div>
 </template>
-
 <script lang="ts">
 import { Codemirror } from "vue-codemirror";
 import { javascript } from "@codemirror/lang-javascript";
@@ -36,3 +43,34 @@ export default {
   },
 };
 </script>
+<style>
+#nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  background-color: #1c1c1c;
+}
+#nav-left {
+  text-align: left;
+}
+#nav li {
+  color: #dadada;
+  text-decoration: none;
+  display: inline-block;
+  list-style: none;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 25px;
+}
+#nav li:hover {
+  background: #262626;
+  transition: background 0.3s;
+}
+</style>
