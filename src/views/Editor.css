@@ -1,0 +1,32 @@
+#nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    background-color: #1c1c1c;
+  }
+  #nav-left {
+    text-align: left;
+  }
+  #nav li {
+    color: #dadada;
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 25px;
+  }
+  #nav li:hover {
+    background: #262626;
+    transition: background 0.3s;
+  }
+  #nav li:active {
+    background: #000;
+  }

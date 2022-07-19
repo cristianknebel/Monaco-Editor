@@ -1,4 +1,4 @@
-# hello-world
+# smart_service_navigator
 
 ## Project setup
 ```
